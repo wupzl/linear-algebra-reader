@@ -1,0 +1,24 @@
+.shelf-controls { display:flex; flex-wrap:wrap; align-items:center; justify-content:flex-end; gap:.5rem; font-size:.88rem }
+.topbar { gap:1rem; height:auto; min-height:76px; padding-block:.6rem }
+.topbar .brand { flex-shrink:0 }
+.shelf-menu { max-height:65vh; overflow:auto }
+.book-home { max-width:55rem; margin:auto; padding:2.5rem 1.25rem 4rem; font-size:var(--reading-size); line-height:1.8 }
+.book-home h1 { font-size:clamp(1.9rem,5vw,3.4rem); line-height:1.25 }
+.book-home a, .sidebar a, .pager a { color:var(--accent); text-decoration:underline; text-underline-offset:.2em }
+.book-home section { border-top:1px solid var(--line); margin-top:1.5rem }
+.question, [data-demo] { padding:1rem; margin-block:1rem; background:var(--paper); border:1px solid var(--line); border-radius:.65rem }
+.question h3 { margin-top:0 }
+article button { width:auto; height:auto; padding:.5rem .75rem; margin:.35rem; border-radius:.4rem }
+article input { font:inherit; max-width:100%; background:var(--bg); color:var(--text); border:1px solid var(--line); border-radius:.3rem }
+.demo-controls { display:flex; flex-wrap:wrap; gap:.55rem }
+.demo-controls input { width:4.7em }
+[data-demo] svg { display:block; margin:1rem auto; width:min(100%,28rem); background:var(--bg) }
+[data-demo=vector] svg { touch-action:none }
+[data-handle] { cursor:grab }
+.pager { display:flex; flex-wrap:wrap; gap:1.1rem; margin-top:1rem }
+@media(max-width:520px) {
+  .topbar { flex-wrap:wrap; justify-content:flex-start }
+  .shelf-controls { justify-content:flex-start }
+  html { scroll-padding-top:125px }
+  .question input { display:block }
+}

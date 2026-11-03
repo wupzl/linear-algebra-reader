@@ -1,0 +1,18 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>高斯消元：把方程排成阶梯 · 数学帝国：线性代数编年史</title>
+<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="shelf-nav.css">
+<link rel="stylesheet" href="learning.css">
+<script>window.MathJax={tex:{inlineMath:[['$','$']]}};</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
+<script defer src="learning.js"></script></head><body class="reading">
+<header class="topbar"><a class="brand" href="index.html">数学帝国</a><div class="shelf-controls">
+<a href="https://wupzl.github.io/">学习书架</a><details class="shelf-switch"><summary>切换项目</summary><div class="shelf-menu"><a href="https://wupzl.github.io/rag-empire-reader/">RAG 帝国</a><a href="https://wupzl.github.io/pytorch-apprentice/">PyTorch：炼金术士的学徒</a><a href="https://wupzl.github.io/ai-era-reader/">AI 纪元</a><a href="https://wupzl.github.io/data-empire-reader/">数据帝国</a><a href="https://wupzl.github.io/system-design-reader/">系统设计</a><a href="https://wupzl.github.io/online-troubleshooting-reader/">生产环境</a><a href="https://wupzl.github.io/coding-agent-reader/">Agent 帝国</a><a href="https://wupzl.github.io/interview-proof-reader/">面试官的审判</a><a href="https://wupzl.github.io/langchain-empire-reader/">LangChain 帝国</a><a href="https://wupzl.github.io/linear-algebra-reader/" aria-current="true">线性代数</a></div></details>
+<button id="smaller" aria-label="缩小字号">A−</button><button id="larger" aria-label="放大字号">A+</button>
+<button id="theme">深浅色</button></div></header><div class="reader-layout"><aside class="sidebar"><p>本章目录</p><ul><li><a href="#_1">用等价方程替换原方程</a></li><li><a href="#_2">看主元，也看右端</a></li><li><a href="#practice">章后练习</a></li></ul></aside>
+<main id="main" data-chapter="6"><div class="chapter-heading"><p class="eyebrow">CHAPTER 06 / 11</p><h1>高斯消元：把方程排成阶梯</h1></div>
+<details class="mobile-toc"><summary>展开本章目录</summary><ul><li><a href="#_1">用等价方程替换原方程</a></li><li><a href="#_2">看主元，也看右端</a></li><li><a href="#practice">章后练习</a></li></ul></details>
+<article><h2 id="_1">用等价方程替换原方程</h2>
+<p>求解 $x+y=3$、$2x+y=4$。把第二行减去第一行的两倍得到 $-y=-2$，故 $y=2$，回代得 $x=1$。增广矩阵把系数和右端一起记录。交换行、用非零数乘行、把另一行的倍数加过来，都保持解集。</p>
+<h2 id="_2">看主元，也看右端</h2>
+<p>阶梯形中非零行的首个非零元素称为主元。系数矩阵的主元个数是秩。最简阶梯形还要求每个主元为 1，主元列其他元素为零。出现 $0=1$ 一类矛盾则无解。没有矛盾时，每列都有主元就有唯一解，有自由变量则在实数域有无穷多解。</p><section id="practice"><h2>章后练习</h2><p>先写下自己的思路，再查看解析对照。</p><section class="question"><h3>1. $x+y=1$ 与 $2x+2y=3$ 有解吗？</h3><label>我的答案 <input type="text" autocomplete="off"></label><button type="button" data-check="1" aria-expanded="false">提交并查看解析</button><p hidden>无解。第二式减去第一式的两倍得到 $0=1$。</p></section><section class="question"><h3>2. $x+y=1$ 的所有解怎样写？</h3><label>我的答案 <input type="text" autocomplete="off"></label><button type="button" data-check="2" aria-expanded="false">提交并查看解析</button><p hidden>$(x,y)=(1-t,t)$，其中 $t$ 可以是任意实数。</p></section></section>
+<button id="complete" aria-pressed="false">标记已读</button><nav class="pager"><a href="chapter-05.html">上一章</a> <a href="chapter-07.html">下一章</a> <a href="index.html">返回目录</a></nav></article></main></div></body></html>

@@ -1,0 +1,19 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>向量空间：找出真正独立的方向 · 数学帝国：线性代数编年史</title>
+<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="shelf-nav.css">
+<link rel="stylesheet" href="learning.css">
+<script>window.MathJax={tex:{inlineMath:[['$','$']]}};</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
+<script defer src="learning.js"></script></head><body class="reading">
+<header class="topbar"><a class="brand" href="index.html">数学帝国</a><div class="shelf-controls">
+<a href="https://wupzl.github.io/">学习书架</a><details class="shelf-switch"><summary>切换项目</summary><div class="shelf-menu"><a href="https://wupzl.github.io/rag-empire-reader/">RAG 帝国</a><a href="https://wupzl.github.io/pytorch-apprentice/">PyTorch：炼金术士的学徒</a><a href="https://wupzl.github.io/ai-era-reader/">AI 纪元</a><a href="https://wupzl.github.io/data-empire-reader/">数据帝国</a><a href="https://wupzl.github.io/system-design-reader/">系统设计</a><a href="https://wupzl.github.io/online-troubleshooting-reader/">生产环境</a><a href="https://wupzl.github.io/coding-agent-reader/">Agent 帝国</a><a href="https://wupzl.github.io/interview-proof-reader/">面试官的审判</a><a href="https://wupzl.github.io/langchain-empire-reader/">LangChain 帝国</a><a href="https://wupzl.github.io/linear-algebra-reader/" aria-current="true">线性代数</a></div></details>
+<button id="smaller" aria-label="缩小字号">A−</button><button id="larger" aria-label="放大字号">A+</button>
+<button id="theme">深浅色</button></div></header><div class="reader-layout"><aside class="sidebar"><p>本章目录</p><ul><li><a href="#_1">生成与无关</a></li><li><a href="#_2">基、维数与坐标</a></li><li><a href="#practice">章后练习</a></li></ul></aside>
+<main id="main" data-chapter="7"><div class="chapter-heading"><p class="eyebrow">CHAPTER 07 / 11</p><h1>向量空间：找出真正独立的方向</h1></div>
+<details class="mobile-toc"><summary>展开本章目录</summary><ul><li><a href="#_1">生成与无关</a></li><li><a href="#_2">基、维数与坐标</a></li><li><a href="#practice">章后练习</a></li></ul></details>
+<article><h2 id="_1">生成与无关</h2>
+<p>把若干向量做任意线性组合，得到它们的张成空间。$(1,0,0)$ 和 $(0,1,0)$ 张成三维空间中的 $xy$ 平面。子空间对加法与数乘封闭，且包含零向量。</p>
+<p>一组向量线性无关，意味着只有把所有系数都设为零，组合结果才为零。把 $(1,1,0)$ 加进上面那组向量会产生依赖，因为它等于前两支箭头之和。</p>
+<h2 id="_2">基、维数与坐标</h2>
+<p>基需要同时张成整个空间并且线性无关。基中向量的数量就是维数。向量在给定基下有唯一坐标。用 $b_1=(1,1)$、$b_2=(1,-1)$ 做基，$(3,1)=2b_1+b_2$，其新坐标为 $(2,1)$。</p><section id="practice"><h2>章后练习</h2><p>先写下自己的思路，再查看解析对照。</p><section class="question"><h3>1. $(1,2)$ 和 $(2,4)$ 可以做二维空间的基吗？</h3><label>我的答案 <input type="text" autocomplete="off"></label><button type="button" data-check="1" aria-expanded="false">提交并查看解析</button><p hidden>不能。第二支是第一支的两倍，张成一条直线。</p></section><section class="question"><h3>2. 原点以外的一条直线是子空间吗？</h3><label>我的答案 <input type="text" autocomplete="off"></label><button type="button" data-check="2" aria-expanded="false">提交并查看解析</button><p hidden>不一定。只要直线不经过原点，就缺少零向量。</p></section></section>
+<button id="complete" aria-pressed="false">标记已读</button><nav class="pager"><a href="chapter-06.html">上一章</a> <a href="chapter-08.html">下一章</a> <a href="index.html">返回目录</a></nav></article></main></div></body></html>

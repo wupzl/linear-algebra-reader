@@ -1,0 +1,19 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>奇异值分解：找出矩阵最擅长放大的方向 · 数学帝国：线性代数编年史</title>
+<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="shelf-nav.css">
+<link rel="stylesheet" href="learning.css">
+<script>window.MathJax={tex:{inlineMath:[['$','$']]}};</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
+<script defer src="learning.js"></script></head><body class="reading">
+<header class="topbar"><a class="brand" href="index.html">数学帝国</a><div class="shelf-controls">
+<a href="https://wupzl.github.io/">学习书架</a><details class="shelf-switch"><summary>切换项目</summary><div class="shelf-menu"><a href="https://wupzl.github.io/rag-empire-reader/">RAG 帝国</a><a href="https://wupzl.github.io/pytorch-apprentice/">PyTorch：炼金术士的学徒</a><a href="https://wupzl.github.io/ai-era-reader/">AI 纪元</a><a href="https://wupzl.github.io/data-empire-reader/">数据帝国</a><a href="https://wupzl.github.io/system-design-reader/">系统设计</a><a href="https://wupzl.github.io/online-troubleshooting-reader/">生产环境</a><a href="https://wupzl.github.io/coding-agent-reader/">Agent 帝国</a><a href="https://wupzl.github.io/interview-proof-reader/">面试官的审判</a><a href="https://wupzl.github.io/langchain-empire-reader/">LangChain 帝国</a><a href="https://wupzl.github.io/linear-algebra-reader/" aria-current="true">线性代数</a></div></details>
+<button id="smaller" aria-label="缩小字号">A−</button><button id="larger" aria-label="放大字号">A+</button>
+<button id="theme">深浅色</button></div></header><div class="reader-layout"><aside class="sidebar"><p>本章目录</p><ul><li><a href="#_1">输入方向和输出方向分开看</a></li><li><a href="#_2">近似、降维与低秩参数</a></li><li><a href="#practice">章后练习</a></li></ul></aside>
+<main id="main" data-chapter="10"><div class="chapter-heading"><p class="eyebrow">CHAPTER 10 / 11</p><h1>奇异值分解：找出矩阵最擅长放大的方向</h1></div>
+<details class="mobile-toc"><summary>展开本章目录</summary><ul><li><a href="#_1">输入方向和输出方向分开看</a></li><li><a href="#_2">近似、降维与低秩参数</a></li><li><a href="#practice">章后练习</a></li></ul></details>
+<article><h2 id="_1">输入方向和输出方向分开看</h2>
+<p>任意实 $m\times n$ 矩阵可写成 $A=U\Sigma V^T$。$V^T$ 先把输入换到一组正交坐标，$\Sigma$ 按非负奇异值缩放，$U$ 把结果送到输出空间。输入与输出可以有不同维数。</p>
+<p>$A^TA$ 的特征值是奇异值的平方，特征向量给出右奇异方向。对 $\sigma_i&gt;0$，$u_i=Av_i/\sigma_i$。例子 $A=\operatorname{diag}(3,-2)$ 的奇异值是 3 和 2，负号体现在输出方向中。</p>
+<h2 id="_2">近似、降维与低秩参数</h2>
+<p>保留最大的 $k$ 个奇异值及对应方向，可以得到 Frobenius 范数下的最优秩至多为 $k$ 的近似。灰度图可用少量方向保留主要轮廓，细节会随截断丢失。对逐列中心化的数据矩阵做 SVD，右奇异方向就是 PCA 的主轴。LoRA 则训练低秩更新的因子，通常无需对原权重做 SVD。</p><section id="practice"><h2>章后练习</h2><p>先写下自己的思路，再查看解析对照。</p><section class="question"><h3>1. 奇异值为 $5,2,0$ 的矩阵秩是多少？</h3><label>我的答案 <input type="text" autocomplete="off"></label><button type="button" data-check="1" aria-expanded="false">提交并查看解析</button><p hidden>$2$。秩等于非零奇异值的数量。</p></section><section class="question"><h3>2. 只保留最大的奇异值，上例的 Frobenius 误差是多少？</h3><label>我的答案 <input type="text" autocomplete="off"></label><button type="button" data-check="2" aria-expanded="false">提交并查看解析</button><p hidden>$2$。误差是被舍弃奇异值的平方和再开根号。</p></section></section>
+<button id="complete" aria-pressed="false">标记已读</button><nav class="pager"><a href="chapter-09.html">上一章</a> <a href="chapter-11.html">下一章</a> <a href="index.html">返回目录</a></nav></article></main></div></body></html>
