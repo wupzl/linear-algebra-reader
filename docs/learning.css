@@ -22,3 +22,7 @@ article input { font:inherit; max-width:100%; background:var(--bg); color:var(--
   html { scroll-padding-top:125px }
   .question input { display:block }
 }
+
+.topbar .shelf-nav { width:auto; order:0; border:0; padding:0; margin:0 }
+.topbar .shelf-menu { right:auto; left:0 }
+@media (min-width: 521px) { .topbar .shelf-menu { left:auto; right:0 } }

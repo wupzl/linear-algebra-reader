@@ -1,6 +1,7 @@
 from html import escape
 from pathlib import Path
 import re
+import json
 
 import markdown
 
@@ -20,7 +21,7 @@ def page(title, body, reading=False):
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
 <script defer src="learning.js"></script></head><body class="{'reading' if reading else ''}">
 <header class="topbar"><a class="brand" href="index.html">数学帝国</a><div class="shelf-controls">
-<a href="https://wupzl.github.io/">学习书架</a><details class="shelf-switch"><summary>切换项目</summary>{menu}</details>
+<nav class="shelf-nav"><a class="shelf-home" href="/">学习书架</a><details class="shelf-switch"><summary>切换项目</summary>{menu}</details></nav>
 <button id="smaller" aria-label="缩小字号">A−</button><button id="larger" aria-label="放大字号">A+</button>
 <button id="theme">深浅色</button></div></header>{body}</body></html>"""
 
@@ -67,3 +68,5 @@ sections = ''.join(f'<section><h2>第 {volume} 卷 · {label}</h2><ol start="{fi
     f'<li><a data-entry="{i}" href="{filename(i)}">{titles[i-1]}</a></li>' for i in range(first, last+1)) + '</ol></section>'
     for volume, (first, last, label) in enumerate(groups, 1))
 (DOCS / 'index.html').write_text(page('全书目录', f'<main class="book-home"><p class="eyebrow">LINEAR ALGEBRA</p><h1>{TITLE}</h1><p>从两支箭头出发，逐步理解矩阵如何移动空间，以及如何从数据里找出主要方向。</p><p id="progress"></p><a id="resume" href="chapter-01.html">开始阅读</a>{sections}<p>原稿预告的优化篇尚未提供。当前收录十一章。</p></main>'), encoding='utf-8')
+
+(DOCS / 'chapters.json').write_text(json.dumps([{'number': i, 'title': title} for i, title in enumerate(titles, 1)], ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
